@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service ElementService {
+   rpc List (Empty) returns (ElementList) {}
+}
+
+message Empty {}
+
+message Element {
+   int32 id = 1;
+   double number = 2;
+}
+message ElementList {
+   repeated Element elements = 1;
+}  
